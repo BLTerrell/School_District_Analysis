@@ -28,14 +28,17 @@ Results: Using bulleted lists and images of DataFrames as support, address the f
 -->
 
 -How is the district summary affected?
+
 <img src="Resources/orig_district_summary.png" width="49%"> |
 <img src="Resources/new_district_summary.png" width="49%">
 
 -How is the school summary affected?
+
 <img src="Resources/orig_per_school_summary.png" width="49%"> |
 <img src="Resources/new_per_school_summary.png" width="49%">
 
 -How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
+
 <img src="Resources/orig_top_5_schools.png" width="49%"> |
 <img src="Resources/new_top_5_schools.png" width="49%">
 
