@@ -13,7 +13,7 @@ The school board noticed evidence of academic dishonesty, specifically with the 
 - Software: Python 3.7.9, pandas 1.1.3, numpy 1.19.2, jupyter-notebook 6.1.4, Visual Studio Code 1.52.1
 
 ## Project Results 
-<!-->
+<!--
 How did you perform your analysis (use images and links to code)
 `code`
 Relative links to image
@@ -27,26 +27,49 @@ There is a bulleted list that addresses how each of the seven school district me
 Results: Using bulleted lists and images of DataFrames as support, address the following questions.''
 -->
 
--How is the district summary affected?
-
+- How is the district summary affected?
+  - The tables displayed below show the district summary for the original district analysis (on the left) and the new district analysis (on the right).
 <img src="Resources/orig_district_summary.png" width="49%"> |
 <img src="Resources/new_district_summary.png" width="49%">
 
--How is the school summary affected?
+- How is the school summary affected?
+  - The tables displayed below show the school summary for the original district analysis (on the left) and the new district analysis (on the right).
 
 <img src="Resources/orig_per_school_summary.png" width="49%"> |
 <img src="Resources/new_per_school_summary.png" width="49%">
 
--How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
+- How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
+  - The tables displayed below show the top 5 schools on the original district analysis (on the left) and the new district analysis (on the right). These tables show us that replacing the Thomas High School 9th grade scores with NaN did not affect their performance relative to the other schools.
 
 <img src="Resources/orig_top_5_schools.png" width="49%"> |
 <img src="Resources/new_top_5_schools.png" width="49%">
 
--How does replacing the ninth-grade scores affect the following:
--Math and reading scores by grade
--Scores by school spending
--Scores by school size
--Scores by school type
+- How does replacing the ninth-grade scores affect the following:
+  - Reading scores by grade
+
+  <img src="Resources/orig_reading_scores_by_grade.png" width="49%"> |
+  <img src="Resources/new_reading_scores_by_grade.png" width="49%">
+
+  - Math scores by grade
+
+  <img src="Resources/orig_math_scores_by_grade.png" width="49%"> |
+  <img src="Resources/new_math_scores_by_grade.png" width="49%">
+
+
+  - Scores by school spending
+
+  <img src="Resources/orig_scores_by_school_spending.png" width="49%"> |
+  <img src="Resources/new_scores_by_school_spending.png" width="49%">
+
+  - Scores by school size
+
+  <img src="Resources/orig_scores_by_school_size.png" width="49%"> |
+  <img src="Resources/new_scores_by_school_size.png" width="49%">
+
+  - Scores by school type
+
+  <img src="Resources/orig_scores_by_school_type.png" width="49%"> |
+  <img src="Resources/new_scores_by_school_type.png" width="49%">
 
 
 ## Summary
@@ -54,7 +77,7 @@ Results: Using bulleted lists and images of DataFrames as support, address the f
 ### 4 Changes
 
 After replacing the Thomas High School ninth graders' reading and math scores with NaNs, we identified 4 changes in the district analysis:
-1. 
-2. 
-3. 
-4. 
+1. One
+2. Two
+3. Three
+4. Four
