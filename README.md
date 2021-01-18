@@ -22,6 +22,12 @@ First, we used the `.loc` method on the `student_data_df` to select all the read
 Next, we repeated for the math scores:
 `student_data_df.loc[(student_data_df['grade'] == '9th') & (student_data_df['school_name'] == 'Thomas High School'),['math_score']] = np.nan`
 
+Then, we needed to grab the number of 9th grade Thomas High School students:
+`thomas_9th_graders = student_data_df.loc[(student_data_df['grade'] == '9th') & (student_data_df['school_name'] == 'Thomas High School')]["Student ID"].count()`. We used this to obtain a new total student count. This allowed us to calculate new math, reading, and overall passing percentages
+
+Afterwards, we began comparing the different high schools utilizing `.groupby(["school_name"])`. We needed to replace the current Thomas High School values because the current DataFrame values were too low due to not being adjusted for the lower student count of only 10th, 11th, and 12th graders. We got our new student count by subtracting the number of 9th graders from the total Thomas High School student population:
+`thomas_non_9th_graders = student_data_df.loc[(student_data_df['school_name'] == 'Thomas High School')]["Student ID"].count() - thomas_9th_graders`.
+
 ### Analysis
 
 - How is the district summary affected?
@@ -31,7 +37,7 @@ Next, we repeated for the math scores:
   <img src="Resources/new_district_summary.png" width="100%">
 
 - How is the school summary affected?
-  - The tables displayed below show the school summary for the original district analysis (on the left) and the new district analysis (on the right).
+  - The tables displayed below show the school summary for the original district analysis (on the left) and the new district analysis (on the right). The only changes on this DataFrame are for the Thomas High School row and they are as follows: a slight decrease in the "Average Math Score", a slight increase in the "Average Reading Score", and miniscule changes to the "% Passing Math", "% Passing Reading", and "% Overall Passing".
 
   <img src="Resources/orig_per_school_summary.png" width="49%">
   <img src="Resources/new_per_school_summary.png" width="49%">
@@ -81,6 +87,8 @@ Next, we repeated for the math scores:
 
 After replacing the Thomas High School ninth graders' reading and math scores with NaNs, we identified 4 changes in the district analysis:
 1. The most noticable difference is the fact that we now see a `nan` for Thomas High School 9th grade as opposed to a numerical value when we look at the reading and math scores by grade
-2. A slight change in numerical values did not move Thomas High School from being the second highest ranking high school when comparing by "% Overall Passing".
-3. There are very minimal changes to "% Passing Math", "% Passing Reading", and "% Overall Passing" on the  that you would only notice if you round to the thousandth place.
-4. Our biggest takeaway was that the Thomas High School 9th graders only account for approximately 1.2% of all students in the district which would explain why we did not see significant differences when we weren't evaluating by grade.
+2. On the school summary for the Thomas High School DataFrame there was a slight decrease in the "Average Math Score", a slight increase in the "Average Reading Score", and miniscule changes to the "% Passing Math", "% Passing Reading", and "% Overall Passing".
+3. A slight change in numerical values did not move Thomas High School from being the second highest ranking high school when comparing by "% Overall Passing".
+4. There are very minimal changes to "% Passing Math", "% Passing Reading", and "% Overall Passing" on the  that you would only notice if you round to the thousandth place.
+
+ Our biggest takeaway was that the Thomas High School 9th graders only account for approximately 1.2% of all students in the district which would explain why we did not see significant differences when we weren't evaluating by grade.
