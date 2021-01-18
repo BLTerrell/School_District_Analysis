@@ -13,11 +13,7 @@ The school board noticed evidence of academic dishonesty, specifically with the 
 - Software: Python 3.7.9, pandas 1.1.3, numpy 1.19.2, jupyter-notebook 6.1.4, Visual Studio Code 1.52.1
 
 ## Project Results 
-<!--
-How did you perform your analysis (use images and links to code)
-`code`
-Relative links to image
--->
+
 ### Procedure
 
 First, we used the `.loc` method on the `student_data_df` to select all the reading scores from the 9th grade at Thomas High School and replaced them with NaN.
@@ -27,28 +23,24 @@ Next, we repeated for the math scores:
 `student_data_df.loc[(student_data_df['grade'] == '9th') & (student_data_df['school_name'] == 'Thomas High School'),['math_score']] = np.nan`
 
 ### Analysis
-<!--
-There is a bulleted list that addresses how each of the seven school district metrics was affected by the changes in the data (10 pt).
-Results: Using bulleted lists and images of DataFrames as support, address the following questions.''
--->
 
 - How is the district summary affected?
   - The tables displayed below show the district summary for the original district analysis (on the top) and the new district analysis (on the bottom). There are very minimal changes to "% Passing Math", "% Passing Reading", and "% Overall Passing" that you would only notice if you round to the thousandth place which we were advised not to in our module.
 
-<img src="Resources/orig_district_summary.png" width="100%">
-<img src="Resources/new_district_summary.png" width="100%">
+  <img src="Resources/orig_district_summary.png" width="100%">
+  <img src="Resources/new_district_summary.png" width="100%">
 
 - How is the school summary affected?
   - The tables displayed below show the school summary for the original district analysis (on the left) and the new district analysis (on the right).
 
-<img src="Resources/orig_per_school_summary.png" width="49%">
-<img src="Resources/new_per_school_summary.png" width="49%">
+  <img src="Resources/orig_per_school_summary.png" width="49%">
+  <img src="Resources/new_per_school_summary.png" width="49%">
 
 - How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
   - The tables displayed below show the top 5 schools on the original district analysis (on the left) and the new district analysis (on the right). These tables show us that replacing the Thomas High School 9th grade scores with `nan` did not affect their performance relative to the other schools as they maintained the second highest ranking for "% Overall Passing".
 
-<img src="Resources/orig_top_5_schools.png" width="49%">
-<img src="Resources/new_top_5_schools.png" width="49%">
+  <img src="Resources/orig_top_5_schools.png" width="49%">
+  <img src="Resources/new_top_5_schools.png" width="49%">
 
 - How does replacing the ninth-grade scores affect the following:
   - Reading scores by grade
